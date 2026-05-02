@@ -1,0 +1,17 @@
+﻿# Terraform
+**/.terraform/
+**/.terraform.lock.hcl
+**/.terraform.tfstate.lock.info
+**/terraform.tfstate
+**/terraform.tfstate.backup
+**/terraform.tfstate.*.backup
+**/terraform.tfvars
+
+# Secrets
+**/*.pem
+**/*.key
+
+# Build artifacts
+**/lambda_function.zip
+**/crash.log
+**/*.tfplan
