@@ -1,0 +1,23 @@
+# Copier ce fichier en terraform.tfvars et adapter les valeurs
+
+aws_region   = "eu-north-1"
+project_name = "tp1-ha"
+environment  = "dev"
+
+# Mot de passe RDS — DOIT être défini, min 8 caractères
+db_password = "ChangeMe-Strong-Password-2024!"
+
+# IMPORTANT: en prod, restreindre à votre IP /32
+allowed_admin_cidr = "0.0.0.0/0"
+
+# Nom de la key pair (optionnel — laisser vide pour utiliser SSM uniquement)
+key_pair_name = ""
+
+# Tailles de l'ASG
+asg_min_size         = 2
+asg_max_size         = 4
+asg_desired_capacity = 2
+
+# Tailles d'instance
+instance_type     = "t3.small"
+db_instance_class = "db.t3.micro"

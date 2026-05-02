@@ -1,0 +1,24 @@
+# Copier ce fichier en terraform.tfvars et adapter
+
+aws_region   = "eu-north-1"
+project_name = "tp2-odoo"
+environment  = "dev"
+
+# Reference au TP1 deja deploye
+tp1_project_name = "tp1-ha"
+tp1_environment  = "dev"
+
+# Securite
+allowed_admin_cidr = "0.0.0.0/0" # Mettre ton IP /32 en prod
+
+# EC2
+instance_type = "t3.medium" # Pour Odoo + Postgres + Bucardo
+
+# Mots de passe (changer absolument!)
+postgres_password   = "OdooSecure2026"
+odoo_admin_password = "AdminOdoo2026"
+bucardo_password    = "BucardoRep2026"
+
+# Versions
+odoo_version     = "19"
+postgres_version = "15"
